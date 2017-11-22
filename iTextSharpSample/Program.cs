@@ -10,6 +10,7 @@ namespace iTextSharpSample
     {
         static void Main(string[] args)
         {
+            PdfOperation.ShowPdfInfo(args[0]);
         }
     }
 }
