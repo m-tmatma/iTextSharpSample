@@ -11,9 +11,11 @@ namespace iTextSharpSample
         static void Main(string[] args)
         {
             string srcFile = args[0];
-            string dstFile = srcFile.Replace(".pdf", ".out.pdf");
+            string dstFile1 = srcFile.Replace(".pdf", ".out1.pdf");
+            string dstFile2 = srcFile.Replace(".pdf", ".out2.pdf");
             PdfOperation.ShowPdfInfo(srcFile);
-            PdfOperation.SetPassword(srcFile, dstFile, "owner", "user");
+            PdfOperation.SetPassword(srcFile, dstFile1, "owner", "user");
+            PdfOperation.SetPDFInfoAndEncrypt(srcFile, dstFile2, "owner", "user");
         }
     }
 }
