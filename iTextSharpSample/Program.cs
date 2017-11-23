@@ -10,7 +10,10 @@ namespace iTextSharpSample
     {
         static void Main(string[] args)
         {
-            PdfOperation.ShowPdfInfo(args[0]);
+            string srcFile = args[0];
+            string dstFile = srcFile.Replace(".pdf", ".out.pdf");
+            PdfOperation.ShowPdfInfo(srcFile);
+            PdfOperation.SetPassword(srcFile, dstFile, "owner", "user");
         }
     }
 }
